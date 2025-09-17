@@ -7,9 +7,35 @@ Este projeto realiza análise de performance e qualidade semântica do modelo `s
 
 ## Contexto do Desafio
 
-Este projeto realiza testes de qualidade semântica e performance na API do modelo `sentence-transformers/all-MiniLM-L6-v2` do Hugging Face.
+São realizados testes de qualidade semântica e performance na API do modelo `sentence-transformers/all-MiniLM-L6-v2` do Hugging Face.
 
-O modelo transforma frases em embeddings vetoriais e calcula similaridades semânticas entre elas, retornando scores entre 0 (sem similaridade) e 1 (total similaridade).
+Sendo que o modelo transforma frases em embeddings vetoriais e calcula similaridades semânticas entre elas, retornando scores entre 0 (sem similaridade) e 1 (total similaridade).
+
+
+## **O que a API faz?**
+
+Recebe uma frase principal e uma ou mais frases de comparação, e retorna **scores de similaridade semântica** (valores entre 0 e 1).
+Quanto maior o score, mais similares são as frases.
+
+
+
+🔹 **Por que isso é importante em um contexto de negócio?**
+
+Empresas que trabalham com **inteligência artificial e dados geográficos** dependem de modelos capazes de identificar similaridades de forma confiável. Por exemplo:
+
+* **Normalização de dados geográficos**: reconhecer que “A floresta amazônica está na América do Sul” e “A selva amazônica fica na América do Sul” têm o mesmo significado, mesmo com palavras diferentes.
+* **Busca semântica em grandes bases de dados**: localizar informações relevantes mesmo que o usuário utilize termos ou expressões distintas.
+* **Detecção de inconsistências** em cadastros imobiliários, registros territoriais ou documentos geoespaciais, permitindo maior precisão na fiscalização ou na tomada de decisão.
+
+
+🔹 **Por que automação + randomização + análise de dados?**
+
+* **Automação de testes de API**: garante que o modelo seja avaliado de forma repetível, rápida e escalável, sem dependendo menos de verificações manuais.
+* **Randomização no Pre-request Script**: introduz variabilidade nos testes, simulando cenários reais de uso, reduzindo viés e aumentando a representatividade dos resultados.
+
+---
+
+
 
 
 ## Metodologia de Testes no Postman
@@ -21,8 +47,7 @@ Foram realizadas 20 iterações automáticas usando o Collection Runner, cada um
 - **1 frase similar** (selecionada aleatoriamente)
 - **1 frase diferente** (selecionada aleatoriamente)
 
-### Por que a Aleatorização é Importante?
-A randomização no Pre-request Script é importante para:
+### A randomização no Pre-request Script é importante para:
 - Evitar viés de teste com combinações fixas
 - Simular uso da API com entradas variadas
 
@@ -225,6 +250,6 @@ Aplicação Streamlit que fornece visualizações completas dos resultados:
 
 
 
-## 📄 Licença
 
-Este projeto é destinado para fins educacionais e de análise de qualidade de dados.
+
+
