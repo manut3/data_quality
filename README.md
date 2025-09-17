@@ -1,7 +1,6 @@
 # 📊 Dashboard de Análise de Similaridade Semântica
 
 
-
 ## Sobre o Projeto
 
 Este projeto realiza análise de performance e qualidade semântica do modelo `sentence-transformers/all-MiniLM-L6-v2` da Hugging Face, testando sua capacidade de distinguir similaridades entre frases com contexto geográfico.
@@ -56,7 +55,7 @@ const frases_diferentes = [
 const frase_similar = frases_similares[Math.floor(Math.random() * frases_similares.length)];
 const frase_diferente = frases_diferentes[Math.floor(Math.random() * frases_diferentes.length)];
 
-// Define variáveis para uso na requisição
+// Variáveis para uso na requisição
 pm.variables.set("frase_principal", frase_principal);
 pm.variables.set("frase_similar", frase_similar);
 pm.variables.set("frase_diferente", frase_diferente);
@@ -89,7 +88,7 @@ pm.test("Resposta é um array", function () {
 
 let responseData = pm.response.json();
 
-// Verifica se temos exatamente dois scores
+// Verifica se há dois scores
 pm.test("Resposta tem dois scores", function () {
     pm.expect(responseData.length).to.eql(2);
 });
@@ -98,7 +97,7 @@ pm.test("Resposta tem dois scores", function () {
 const score_similar = responseData[0];
 const score_diferente = responseData[1];
 
-// Recupera as frases usadas
+// Recupera as frases 
 const frase_principal = pm.variables.get("frase_principal");
 const frase_similar = pm.variables.get("frase_similar");
 const frase_diferente = pm.variables.get("frase_diferente");
@@ -122,12 +121,11 @@ if (score_similar >= 0.75 && score_diferente <= 0.4) {
 }
 pm.environment.set("qualidade_comparacao", qualidade_comparacao);
 
-// Testes explícitos
 pm.test("Score similar maior que score diferente", function () {
     pm.expect(score_similar).to.be.above(score_diferente);
 });
 
-// Métricas de performance da API
+// Métricas de performance da api
 pm.environment.set("codigo_status", pm.response.code);
 pm.environment.set("tempo_resposta_ms", pm.response.responseTime);
 pm.environment.set("tamanho_resposta_bytes", pm.response.headers.get('Content-Length') || pm.response.text().length);
