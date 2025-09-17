@@ -22,7 +22,7 @@ Empresas que trabalham com **inteligência artificial e dados geográficos** dep
 
 * **Normalização de dados geográficos**: reconhecer que “A floresta amazônica está na América do Sul” e “A selva amazônica fica na América do Sul” têm o mesmo significado, mesmo com palavras diferentes.
 * **Busca semântica em grandes bases de dados**: localizar informações relevantes mesmo que o usuário utilize termos ou expressões distintas.
-* **Detecção de inconsistências** em cadastros imobiliários, registros territoriais ou documentos geoespaciais, permitindo maior precisão na fiscalização ou na tomada de decisão.
+* **Detecção de bugs** permite maior precisão na fiscalização ou na tomada de decisão.
 
 
 🔹 **Por que automação + randomização + análise de dados?**
