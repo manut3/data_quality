@@ -205,6 +205,40 @@ streamlit run dashboard.py
 5. **Use o script de extração** para converter para CSV
 6. **Visualize os resultados** no dashboard Streamlit
 
+
+
+
+# Resultados dos Testes de Similaridade Semântica
+
+Os dados abaixo representam os resultados de 20 iterações de testes automatizados realizados com o modelo `sentence-transformers/all-MiniLM-L6-v2` através da API do Hugging Face. Estes resultados foram processados pelo script `extraction.py` e estão disponíveis no arquivo `resultados_completos_20250917_080148.csv`, que pode ser utilizado para visualização no dashboard Streamlit.
+
+## Tabela de Resultados das Iterações
+
+| Iteracao | Timestamp           | Status Code | Response Time (ms) | Test Name | Two Scores Returned | Similar Score Higher | Similar Score > 0.75 | Different Score < 0.4 |
+|----------|---------------------|-------------|--------------------|-----------|---------------------|----------------------|----------------------|-----------------------|
+| 1        | 2025-09-17 03:40:15 | 200         | 590                | testes    | True                | True                 | True                 | True                  |
+| 2        | 2025-09-17 03:40:15 | 200         | 197                | testes    | True                | True                 | False                | False                 |
+| 3        | 2025-09-17 03:40:15 | 200         | 284                | testes    | True                | True                 | False                | False                 |
+| 4        | 2025-09-17 03:40:15 | 200         | 284                | testes    | True                | True                 | False                | False                 |
+| 5        | 2025-09-17 03:40:15 | 200         | 290                | testes    | True                | True                 | True                 | True                  |
+| 6        | 2025-09-17 03:40:15 | 200         | 253                | testes    | True                | True                 | True                 | True                  |
+| 7        | 2025-09-17 03:40:15 | 200         | 380                | testes    | True                | True                 | True                 | True                  |
+| 8        | 2025-09-17 03:40:15 | 200         | 376                | testes    | True                | True                 | True                 | True                  |
+| 9        | 2025-09-17 03:40:15 | 200         | 288                | testes    | True                | True                 | True                 | False                 |
+| 10       | 2025-09-17 03:40:15 | 200         | 230                | testes    | True                | True                 | True                 | False                 |
+| 11       | 2025-09-17 03:40:15 | 200         | 520                | testes    | True                | True                 | True                 | True                  |
+| 12       | 2025-09-17 03:40:15 | 200         | 120197             | testes    | N/A                 | N/A                  | N/A                  | N/A                   |
+| 13       | 2025-09-17 03:40:15 | 200         | 382                | testes    | True                | True                 | False                | True                  |
+| 14       | 2025-09-17 03:40:15 | 200         | 210                | testes    | True                | True                 | True                 | True                  |
+| 15       | 2025-09-17 03:40:15 | 200         | 201                | testes    | True                | True                 | True                 | False                 |
+| 16       | 2025-09-17 03:40:15 | 200         | 219                | testes    | True                | True                 | True                 | True                  |
+| 17       | 2025-09-17 03:40:15 | 200         | 356                | testes    | True                | True                 | True                 | False                 |
+| 18       | 2025-09-17 03:40:15 | 200         | 256                | testes    | True                | True                 | True                 | False                 |
+| 19       | 2025-09-17 03:40:15 | 200         | 337                | testes    | True                | True                 | False                | True                  |
+| 20       | 2025-09-17 03:40:15 | 200         | 784                | testes    | True                | True                 | True                 | False                 |
+
+
+
 ## Estrutura do Projeto
 
 ```
