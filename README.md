@@ -14,6 +14,8 @@ Quanto maior o score, mais similares são as frases.
 
 
 
+
+
 🔹 **Por que isso é importante em um contexto de negócio?**
 
 Empresas que trabalham com **inteligência artificial e dados geográficos** dependem de modelos capazes de identificar similaridades de forma confiável. Por exemplo:
