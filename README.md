@@ -9,12 +9,7 @@ Este projeto realiza análise de performance e qualidade semântica do modelo `s
 
 São realizados testes de qualidade semântica e performance na API do modelo `sentence-transformers/all-MiniLM-L6-v2` do Hugging Face.
 
-Sendo que o modelo transforma frases em embeddings vetoriais e calcula similaridades semânticas entre elas, retornando scores entre 0 (sem similaridade) e 1 (total similaridade).
-
-
-## **O que a API faz?**
-
-Recebe uma frase principal e uma ou mais frases de comparação, e retorna **scores de similaridade semântica** (valores entre 0 e 1).
+Sendo que o modelo transforma frases em embeddings vetoriais e calcula similaridades semânticas entre elas, retornando **scores de similaridade semântica** (valores entre 0 e 1).
 Quanto maior o score, mais similares são as frases.
 
 
