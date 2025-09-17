@@ -194,7 +194,7 @@ python extraction.py
 streamlit run dashboard.py
 ```
 
-3. **No dashboard**, faça upload do arquivo CSV gerado (`resultados_completos_*.csv`)
+3. **No dashboard**, faça upload do arquivo CSV que já está gerado (`resultados_completos_20250917_080148.csv`) ou extraia o resultado do postam com o script extraction.py
 
 ### Método 2: Executando Novos Testes no Postman
 
