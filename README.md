@@ -209,11 +209,11 @@ streamlit run dashboard.py
 
 ```
 DATA_QUALITY/
-├── dashboard.py              # Aplicação Streamlit para visualização
-├── extraction.py             # Script para converter JSON → CSV
-├── similarity-collection.json # Coleção do Postman para testes
-├── resultados_completos_*.csv # Resultados exportados (gerado automaticamente)
-└── README.md                 # Este arquivo
+── dashboard.py                                       # Aplicação Streamlit para visualização
+── extraction.py                                      # Script para converter JSON → CSV
+── resultados_completos_20250917_080148.csv           # Resultados já extraidos pelo arquivo extraction.py  
+── similarity-collection.json.postman_collection.json # Coleção do Postman para testes
+── similarity-tests-results.json.postman_test_run.json # Resultados exportados do postman
 ```
 
 ## Scripts Principais
