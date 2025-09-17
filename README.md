@@ -30,7 +30,6 @@ Empresas que trabalham com **inteligência artificial e dados geográficos** dep
 * **Automação de testes de API**: garante que o modelo seja avaliado de forma repetível, rápida e escalável, sem dependendo menos de verificações manuais.
 * **Randomização no Pre-request Script**: introduz variabilidade nos testes, simulando cenários reais de uso, reduzindo viés e aumentando a representatividade dos resultados.
 
----
 
 
 
@@ -152,6 +151,7 @@ pm.environment.set("tempo_resposta_ms", pm.response.responseTime);
 pm.environment.set("tamanho_resposta_bytes", pm.response.headers.get('Content-Length') || pm.response.text().length);
 ```
 
+---
 
 
 
