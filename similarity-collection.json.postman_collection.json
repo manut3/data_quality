@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "c075b8ff-7c8e-4496-a77e-7ff9895b91fc",
+		"name": "similarity-collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32996383"
+	},
+	"item": [
+		{
+			"name": "testes",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Frase principal (fixa)",
+							"const frase_principal3 = \"A floresta amazônica está localizada na América do Sul.\";",
+							"",
+							"// Frases com alta similaridade esperada",
+							"const frases_similares3 = [",
+							"    \"A selva amazônica fica na América do Sul.\",",
+							"    \"A América do Sul abriga a floresta amazônica.\",",
+							"    \"A floresta amazônica se estende por vários países da América do Sul.\",",
+							"    \"O Brasil contém grande parte da floresta amazônica.\",",
+							"    \"A Amazônia é a maior floresta da América do Sul.\"",
+							"];",
+							"",
+							"// Frases com baixa similaridade esperada",
+							"const frases_diferentes3 = [",
+							"    \"O Monte Everest é o pico mais alto do mundo.\",",
+							"    \"O deserto do Saara está localizado na África.\",",
+							"    \"Nova York é conhecida por seus arranha-céus.\",",
+							"    \"Tóquio é a capital do Japão.\",",
+							"    \"A Austrália é um continente-ilha.\"",
+							"];",
+							"",
+							"// Sorteia uma frase de cada grupo",
+							"const frase_similar3 = frases_similares3[Math.floor(Math.random() * frases_similares3.length)];",
+							"const frase_diferente3 = frases_diferentes3[Math.floor(Math.random() * frases_diferentes3.length)];",
+							"",
+							"// Define variáveis locais para que mudem a cada iteração no Runner",
+							"pm.variables.set(\"frase_principal3\", frase_principal3);",
+							"pm.variables.set(\"frase_similar3\", frase_similar3);",
+							"pm.variables.set(\"frase_diferente3\", frase_diferente3);",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let dadosResposta3 = pm.response.json();",
+							"",
+							"// Verifica se temos dois scores",
+							"pm.test(\"Resposta tem dois scores\", function () {",
+							"    pm.expect(dadosResposta3.length).to.eql(2);",
+							"});",
+							"",
+							"// Extrai os scores",
+							"const score_similar3 = dadosResposta3[0];",
+							"const score_diferente3 = dadosResposta3[1];",
+							"",
+							"// Recupera as frases",
+							"const frase_principal3 = pm.variables.get(\"frase_principal3\");",
+							"const frase_similar3 = pm.variables.get(\"frase_similar3\");",
+							"const frase_diferente3 = pm.variables.get(\"frase_diferente3\");",
+							"",
+							"// Salva os scores nas variáveis de ambiente para exportação se quiser",
+							"pm.environment.set(\"score_similar3\", score_similar3);",
+							"pm.environment.set(\"score_diferente3\", score_diferente3);",
+							"",
+							"// Valida se score da frase similar é maior que da frase diferente",
+							"const comparacao_valida3 = score_similar3 > score_diferente3;",
+							"pm.environment.set(\"comparacao_valida3\", comparacao_valida3);",
+							"",
+							"// Classifica a qualidade da comparação",
+							"let qualidade_comparacao3 = \"indefinida\";",
+							"if (score_similar3 >= 0.75 && score_diferente3 <= 0.4) {",
+							"    qualidade_comparacao3 = \"excelente\";",
+							"} else if (score_similar3 >= 0.6) {",
+							"    qualidade_comparacao3 = \"aceitável\";",
+							"} else {",
+							"    qualidade_comparacao3 = \"ruim\";",
+							"}",
+							"pm.environment.set(\"qualidade_comparacao3\", qualidade_comparacao3);",
+							"",
+							"// Testes explicitos para o Postman",
+							"pm.test(\"Score similar maior que score diferente\", function () {",
+							"    pm.expect(score_similar3).to.be.above(score_diferente3);",
+							"});",
+							"",
+							"pm.test(\"Score similar acima de 0.75\", function () {",
+							"    pm.expect(score_similar3).to.be.above(0.75);",
+							"});",
+							"",
+							"pm.test(\"Score diferente abaixo de 0.4\", function () {",
+							"    pm.expect(score_diferente3).to.be.below(0.4);",
+							"});",
+							"",
+							"// Métricas de performance da API",
+							"pm.environment.set(\"codigo_status3\", pm.response.code);",
+							"pm.environment.set(\"tempo_resposta_ms3\", pm.response.responseTime);",
+							"pm.environment.set(\"tamanho_resposta_bytes3\", pm.response.headers.get('Content-Length') || pm.response.text().length);",
+							"",
+							"// Log para debug (opcional)",
+							"console.log({",
+							"    frase_principal3,",
+							"    frase_similar3,",
+							"    score_similar3,",
+							"    frase_diferente3,",
+							"    score_diferente3,",
+							"    qualidade_comparacao3,",
+							"    comparacao_valida3",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"inputs\": {\n    \"source_sentence\": \"{{frase_principal3}}\",\n    \"sentences\": [\n      \"{{frase_similar3}}\",\n      \"{{frase_diferente3}}\"\n    ]\n  }\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2",
+					"protocol": "https",
+					"host": [
+						"api-inference",
+						"huggingface",
+						"co"
+					],
+					"path": [
+						"models",
+						"sentence-transformers",
+						"all-MiniLM-L6-v2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

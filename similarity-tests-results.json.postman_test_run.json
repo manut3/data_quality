@@ -1,0 +1,199 @@
+{
+	"id": "5eb12a7a-b3f2-4ffe-8b94-dacf2539a5b6",
+	"name": "similarity-collection.json",
+	"timestamp": "2025-09-17T03:42:23.173Z",
+	"collection_id": "32996383-c075b8ff-7c8e-4496-a77e-7ff9895b91fc",
+	"folder_id": 0,
+	"environment_id": "32996383-cabf9df9-c4fb-4021-bed9-78b578b037ae",
+	"totalPass": 62,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2025-09-17T03:40:15.673Z",
+	"totalFail": 14,
+	"results": [
+		{
+			"id": "3e6d0893-63c5-4e15-9163-714d6c56e4e0",
+			"name": "testes",
+			"url": "https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2",
+			"time": 784,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Resposta tem dois scores": true,
+				"Score similar maior que score diferente": true,
+				"Score similar acima de 0.75": true,
+				"Score diferente abaixo de 0.4": false
+			},
+			"testPassFailCounts": {
+				"Resposta tem dois scores": {
+					"pass": 19,
+					"fail": 0
+				},
+				"Score similar maior que score diferente": {
+					"pass": 19,
+					"fail": 0
+				},
+				"Score similar acima de 0.75": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Score diferente abaixo de 0.4": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				590,
+				197,
+				284,
+				284,
+				290,
+				253,
+				380,
+				376,
+				288,
+				230,
+				520,
+				120197,
+				382,
+				210,
+				201,
+				219,
+				356,
+				256,
+				337,
+				784
+			],
+			"allTests": [
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": false,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": false,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": false,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": false,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": false
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": false,
+					"Score diferente abaixo de 0.4": true
+				},
+				{
+					"Resposta tem dois scores": true,
+					"Score similar maior que score diferente": true,
+					"Score similar acima de 0.75": true,
+					"Score diferente abaixo de 0.4": false
+				}
+			]
+		}
+	],
+	"count": 20,
+	"totalTime": 126634,
+	"collection": {
+		"requests": [
+			{
+				"id": "3e6d0893-63c5-4e15-9163-714d6c56e4e0",
+				"method": "POST"
+			}
+		]
+	}
+}

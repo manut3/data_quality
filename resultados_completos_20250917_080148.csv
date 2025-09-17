@@ -1,0 +1,21 @@
+iteracao,timestamp,status_code,response_time_ms,nome_test,resposta_tem_dois_scores,score_similar_maior,score_similar_acima_075,score_diferente_abaixo_04
+1,2025-09-17 03:40:15,200,590,testes,True,True,True,True
+2,2025-09-17 03:40:15,200,197,testes,True,True,False,False
+3,2025-09-17 03:40:15,200,284,testes,True,True,False,False
+4,2025-09-17 03:40:15,200,284,testes,True,True,False,False
+5,2025-09-17 03:40:15,200,290,testes,True,True,True,True
+6,2025-09-17 03:40:15,200,253,testes,True,True,True,True
+7,2025-09-17 03:40:15,200,380,testes,True,True,True,True
+8,2025-09-17 03:40:15,200,376,testes,True,True,True,True
+9,2025-09-17 03:40:15,200,288,testes,True,True,True,False
+10,2025-09-17 03:40:15,200,230,testes,True,True,True,False
+11,2025-09-17 03:40:15,200,520,testes,True,True,True,True
+12,2025-09-17 03:40:15,200,120197,testes,N/A,N/A,N/A,N/A
+13,2025-09-17 03:40:15,200,382,testes,True,True,False,True
+14,2025-09-17 03:40:15,200,210,testes,True,True,True,True
+15,2025-09-17 03:40:15,200,201,testes,True,True,True,False
+16,2025-09-17 03:40:15,200,219,testes,True,True,True,True
+17,2025-09-17 03:40:15,200,356,testes,True,True,True,False
+18,2025-09-17 03:40:15,200,256,testes,True,True,True,False
+19,2025-09-17 03:40:15,200,337,testes,True,True,False,True
+20,2025-09-17 03:40:15,200,784,testes,True,True,True,False
