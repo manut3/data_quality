@@ -36,7 +36,6 @@ Empresas que trabalham com **inteligência artificial e dados geográficos** dep
 
 
 ## Metodologia de Testes no Postman
-
 ### Estrutura dos Testes
 Foram realizadas 20 iterações automáticas usando o Collection Runner, cada uma contendo:
 
